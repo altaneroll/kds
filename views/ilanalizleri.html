@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPECTRA Air - İl Analizleri</title>
+    <link rel="stylesheet" href="/css/ilanalizleri.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="/js/ilanalizleri.js" defer></script>
+</head>
+<body>
+    <!-- Aside Menu -->
+    <div class="aside">
+        <div class="logo">
+            <img src="/images/Spectra AIR (1).png" alt="Spectra Air Logo">
+            <p id="displayUsername">username</p>
+        </div>
+        <nav class="nav-links">
+            <a href="/anasayfa" class="nav-link" id="anasayfa">
+                <img src="/images/homepage_icon.png" alt="Ana Sayfa İkonu" class="nav-icon"> Ana Sayfa
+            </a>
+            <a href="/top5" class="nav-link" id="top5">
+                <img src="/images/up_icon.png" alt="Top 5 İkonu" class="nav-icon"> Top 5 Havalimanı
+            </a>
+            <a href="/worst5" class="nav-link" id="worst5">
+                <img src="/images/down_icon.png" alt="Worst 5 İkonu" class="nav-icon"> Worst 5 Havalimanı
+            </a>
+            <a href="/ilanalizleri" class="nav-link" id="ilanaliz">
+                <img src="/images/analyse_icon .png" alt="İl Analizleri İkonu" class="nav-icon"> İl Analizleri
+            </a>
+            <a href="/tahminleme" class="nav-link" id="tahmin">
+                <img src="/images/guess_icon.png" alt="Tahminleme İkonu" class="nav-icon"> Tahminleme
+            </a>
+        </nav>
+        <footer>
+            <p>info.spectra@gmail.com</p>
+        </footer>
+    </div>
+
+    <div class="main-container">
+        <!-- Navbar -->
+        <div class="navbar-container">
+            <div class="navbar-left">
+                <img src="/images/spectra font logo.png" alt="spectra font logo">
+            </div>
+            <div class="navbar-right">
+                <div class="language-switcher">
+                    <button class="language-button" onclick="toggleDropdown()">
+                        🌐 TR <span class="dropdown-icon">&nbsp;ᐁ</span>
+                    </button>
+                    <div class="dropdown-content" id="languageDropdown" style="display: none;">
+                        <a href="#" onclick="setLanguage('tr')">TR</a>
+                        <a href="#" onclick="setLanguage('en')">ENG</a>
+                    </div>
+                </div>
+
+                <div class="fullscreen-button">
+                    <button class="fullscreen" id="fullscreen-btn">
+                        <img src="/images/fullscreenicon.png" alt="fullscreen icon">
+                    </button>
+                </div>
+
+                <div class="user-button">
+                    <button class="user">
+                        <img src="/images/usericon.png" alt="Login Icon" />
+                    </button>
+                    <div class="login-menu">
+                        <div id="usernameDisplay">username</div>
+                        <a href="/login">Çıkış Yap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HOME SECTION -->
+        <div class="home-container">
+            <div class="home-left">
+                <h2>İl Analizleri</h2>
+            </div>
+            <div class="home-right">
+                <p><b>İl Analizleri / HOME</b></p>
+            </div>
+        </div>
+
+        <!-- Sayfa Bilgisi SECTION -->
+        <div class="bilgi-container">
+            <ul>
+                <li>Türkiye’deki havalimanlarının aylık uçuş sayıları</li>
+                <li>Türkiye’deki havalimanlarının mevsim bazlı uçuş sayıları </li>
+                <li>Türkiye’deki havalimanlarının geçmiş 5 yıl ile gelecek yıllara ait analizleri ve raporları</li>
+
+            </ul>
+        </div>
+
+        <!-- İl Seçimi -->
+        <div class="il-secimi-container">
+            <label for="il-secimi">İl Seçiniz:</label>
+            <select id="il-secimi">
+                <option value="">İl seçiniz</option>
+                <!-- İl seçenekleri buraya gelir -->
+            </select>
+        
+            <label for="havalimani-secimi">Havalimanı Seçiniz:</label>
+            <select id="havalimani-secimi">
+                <option value="">Havalimanı seçiniz</option>
+                <!-- Havalimanı seçenekleri buraya gelir -->
+            </select>
+        
+            <label for="yil-secimi">Yıl Seçiniz:</label>
+            <select id="yil-secimi">
+                <option value="">Yıl seçiniz</option>
+                <!-- Yıl seçenekleri buraya gelir -->
+            </select>
+        
+            <div id="grafikler">
+                <!-- Google Charts veya diğer grafikler buraya eklenecek -->
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

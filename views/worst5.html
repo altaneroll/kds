@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worst 5 Havalimanı</title>
+    <link rel="stylesheet" href="/css/worst5.css">
+    <script src="/js/worst5.js" defer></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+
+</head>
+
+<body>
+    <!-- Aside Menu -->
+    <div class="aside">
+        <div class="logo">
+            <img src="/images/Spectra AIR (1).png" alt="Spectra Air Logo">
+            <p id="displayUsername">username</p>
+        </div>
+        <nav class="nav-links">
+            <a href="/anasayfa" class="nav-link" id="anasayfa">
+                <img src="/images/homepage_icon.png" alt="Ana Sayfa İkonu" class="nav-icon"> Ana Sayfa
+            </a>
+            <a href="/top5" class="nav-link" id="top5">
+                <img src="/images/up_icon.png" alt="Top 5 İkonu" class="nav-icon"> Top 5 Havalimanı
+            </a>
+            <a href="/worst5" class="nav-link" id="worst5">
+                <img src="/images/down_icon.png" alt="Worst 5 İkonu" class="nav-icon"> Worst 5 Havalimanı
+            </a>
+            <a href="/ilanalizleri" class="nav-link" id="ilanaliz">
+                <img src="/images/analyse_icon .png" alt="İl Analizleri İkonu" class="nav-icon"> İl Analizleri
+            </a>
+            <a href="/tahminleme" class="nav-link" id="tahmin">
+                <img src="/images/guess_icon.png" alt="Tahminleme İkonu" class="nav-icon"> Tahminleme
+            </a>
+        </nav>
+        <footer>
+            <p>info.spectra@gmail.com</p>
+        </footer>
+    </div>
+
+    <div class="main-container">
+        <!-- Navbar -->
+        <div class="navbar-container">
+            <div class="navbar-left">
+                <img src="/images/spectra font logo.png" alt="spectra font logo">
+            </div>
+
+            <div class="navbar-right">
+                <div class="language-switcher">
+                    <button class="language-button" onclick="toggleDropdown()">
+                        🌐 TR <span class="dropdown-icon">&nbsp;ᐁ</span>
+                    </button>
+                    <div class="dropdown-content" id="languageDropdown" style="display: none;">
+                        <a href="#" onclick="setLanguage('tr')">TR</a>
+                        <a href="#" onclick="setLanguage('en')">ENG</a>
+                    </div>
+                </div>
+
+                <div class="fullscreen-button">
+                    <button class="fullscreen" id="fullscreen-btn">
+                        <img src="/images/fullscreenicon.png" alt="fullscreen icon">
+                    </button>
+                </div>
+
+                <div class="user-button">
+                    <button class="user">
+                        <img src="/images/usericon.png" alt="Login Icon" />
+                    </button>
+                    <div class="login-menu">
+                        <div id="usernameDisplay">username</div>
+                        <a href="login.html">Çıkış Yap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HOME SECTION -->
+        <div class="home-container">
+            <div class="home-left">
+                <h2>Worst 5 Havalimanı</h2>
+            </div>
+            <div class="home-right">
+                <p><b>Worst 5 Havalimanı / HOME</b></p>
+            </div>
+        </div>
+
+        <!-- SAYFA BİLGİSİ SECTION -->
+        <div class="bilgi-container">
+            <ul>
+                <li class="a">İllerin son yıla ait (2023) iç hat uçuş sayılarına göre karşılaştırılması ve tablolaştırılması</li>
+                <li class="b">Son yıla ait iç hat uçuş sayısı en düşük 5 il</li> 
+                <li class="c">Son yıl iç hat uçuş sayısına bağlı olarak yolcu sayısı en düşük 5 il</li>
+            </ul>
+        </div>
+
+        <!-- Top 5 TABLO SECTION -->
+        <div class="tablo-container">
+            <h1>Worst 5 Havalimanı</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>İl Plaka</th>
+                        <th>İl Adı</th>
+                        <th>Havalimanı ID</th>
+                        <th>Havalimanı Adı</th>
+                        <th>Uçuş Sayısı</th>
+                        <th>Yolcu Sayısı</th>
+                        <th>Yıl</th>
+                    </tr>
+                </thead>
+                <tbody id="worst5-table"></tbody>
+            </table>
+        </div>
+
+        <!-- DASHBOARD SECTION -->
+        <div class="dashboard-container">
+            <div class="grafik-alan">
+                <h3>Uçuş Sayıları</h3>
+                <div id="ucusChart" class="grafik"></div>
+            </div>
+            <div class="grafik-alan">
+                <h3>Yolcu Sayıları</h3>
+                <div id="yolcuChart" class="grafik"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
